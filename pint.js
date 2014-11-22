@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var _          = require("underscore");
-var parseArgs  = require('minimist');
+var parseArgs  = require("minimist");
 var twitterAPI = require("node-twitter-api");
 var actions    = require("./lib/actions");
 var tokens     = require("./lib/tokens");

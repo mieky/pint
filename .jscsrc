@@ -15,7 +15,7 @@
 
     "maximumLineLength": 120,
 
-    "requireDotNotation": false,
+    "requireDotNotation": null,
     "requireCommaBeforeLineBreak": true,
     "requireSpaceAfterKeywords": [
         "do",
