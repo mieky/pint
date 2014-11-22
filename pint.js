@@ -16,21 +16,24 @@ if (argv["_"].length < 1 || actionNames.indexOf(action) === -1) {
     process.exit(1);
 }
 
-// Wrap twitter(function, callback) to
-//      twitter.function(token, tokenSecret, callback)
+// Wrap twitter("<namespace>/<function>", params, callback) to
+//      twitter[<namespace>]("<function>", params, tokenSecret, callback)
 // to centralize the passing of tokens.
-function twitterWithTokens(functionName, callback) {
+function twitterWithTokens(path, params, callback) {
     var twitter = new twitterAPI({
         consumerKey: tokens.consumerKey,
         consumerSecret: tokens.consumerSecret
     });
 
-    if (!twitter[functionName]) {
-        throw Error("No such Twitter function: %s", functionName);
+    var namespace = path.split("/")[0];
+    var functionName = path.split("/")[1];
+
+    if (!twitter[namespace]) {
+        throw Error("No such Twitter namespace: %s", namespace);
     }
 
     // Call the action on the Twitter module
-    twitter[functionName](tokens.accessToken,
+    twitter[namespace](functionName, params, tokens.accessToken,
         tokens.accessTokenSecret, callback);
 }
 
