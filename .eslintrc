@@ -1,0 +1,32 @@
+{
+    "env": {
+        "node":       true
+    },
+
+    "globals": {
+        "require":    true,
+        "console":    true,
+    },
+
+    "rules": {
+        "dot-notation":         0,
+        "new-cap":              0,
+        "no-alert":             1,
+        "no-console":           0,
+        "no-mixed-spaces-and-tabs": 0,
+        "no-multi-str":         0,
+        "no-process-exit":      0,
+        "no-space-before-semi": 1,
+        "no-spaced-func":       1,
+        "no-trailing-spaces":   0,
+        "no-wrap-func":         0,
+        "no-underscore-dangle": 0,
+        "no-unused-vars":       [2, { vars: "all", args: "none" }],
+        "key-spacing":          0,
+        "no-multi-spaces":      0,
+        "quotes":               0,
+        "space-after-keywords": 0,
+        "space-infix-ops":      1,
+        "strict":               0,
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "pint-twitter",
+  "description": "Personal Insight for Twitter",
+  "version": "0.0.0",
+  "author": "Mike Arvela <mike@arvela.net> (http://mike.fi/)",
+  "bugs": {
+    "url": "https://github.com/mieky/pint/issues"
+  },
+  "dependencies": {
+    "minimist": "^1.1.0",
+    "node-twitter-api": "~1.5.0",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "jscs": "~1.7.3",
+    "string": "~2.2.0"
+  },
+  "homepage": "https://github.com/mieky/pint",
+  "keywords": [
+    "twitter"
+  ],
+  "license": "MIT",
+  "main": "pint.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mieky/pint.git"
+  },
+  "scripts": {
+    "jscs": "node_modules/.bin/jscs ./*.js lib/*.js || true"
+  }
+}
